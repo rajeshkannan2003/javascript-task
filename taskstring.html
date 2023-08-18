@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string task</title>
+</head>
+<body>
+    <!-- <div>
+        <p>string repeat method</p>
+        <input type="text" id="str1" name="str1"/>
+            <input type="text" id="strep" name="strep"/>
+            <button type="button" onclick="strrep()">repeat Functions</button>
+            <p id="repeat"></p>
+            <script>
+                function strrep(){
+                    let str1 = document.getElementById('str1').value;
+                    let strep = document.getElementById('strep').value;
+                    let repeat="";
+
+                    repaet +="repeat:" + str1.repeat(strep);
+
+                    document.getElementById('repeat').innerHTML = repeat;
+                }
+                
+            </script>
+
+
+
+    </div>
+ -->
+
+    <div>
+        <!-- replace function -->
+        <h2>replace function</h2>
+        string: <input type="text" id="str"><br><br>
+        find: <input type="text" id="strfd"><br><br>
+        Replaceby: <input type="text" id="repby"><br><br>
+        <button id="" onclick="replace()">replace</button>
+        <p id="repop"></p>
+
+        <script>
+            function replace(){
+                let str = document.getElementById('str').value;
+                let strfd = document.getElementById('strfd').value;
+                let replaceby =document.getElementById('repby').value;
+                let result = "";
+                let counter = 0;
+                for ( let i=0 ; i < str.length ; i++){
+                    if (str[i] == strfd && counter < 1 )  {
+                        result += replaceby;
+                        counter++;
+                    }
+                    else{
+                        result += str[i];
+                    }
+                    document.getElementById('repop').innerhtml = result;
+                }
+            }
+        </script>
+
+
+    </div>
+    <hr>
+    <div>
+        <h2>startwith function</h2>
+        string: <input type="text" id="str4"> <br><br>
+        compare: <input type="text" id="compr"><br><br>
+        <button onclick="startsWith()">compare</button>
+        <p id="swop"></p>
+        <script>
+            function startsWith() {
+                let str = document.getElementById('str4').value;
+                let compare = document.getElementById('compr').value;
+                let result = "" ;
+                let counter = 0 ;
+
+                for ( let i=0 ; i < str.length ; i++){
+                    if(str[i] == compare[i]){
+                        counter++;
+                    }else{
+                        break;
+                    }
+                }
+                    if(counter == compare.length) {
+                        result = "true";
+                    }
+                    else{
+                        result = "false";
+                    }
+               
+                 document.getElementById('swop').innerHTML = result;
+                 console.log(result);
+            }
+        </script>
+    </div>
+
+    <hr>
+    <div>
+        <h1>repeat function</h1>
+        string: <input type="text" value="sg" id="sg"> <br><br>
+        repeat: <input type="text" value="repeat" id="repeat"> <br><br>
+        <button onclick="repeat()">repeat</button>
+        <h2 id="repeatop"></h2>
+        <script>
+            function repeat() {
+                let sg = document.getElementById('sg').value;
+                let repeat = document.getElementById('repeat').value;
+                let result = "";
+                let count = 1 ;
+
+                for( let i=0 ; i<=count ; i++){
+                    if(count <= repeat){
+                        result += sg;
+                        count++;
+                    }
+                }
+                document.getElementById('repeatop').innerHTML=result;
+            }
+        </script>
+    </div>
+    
+</body>
+</html>

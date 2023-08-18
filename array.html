@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2>array push</h2>
+  
+   <p id="push"></p>
+
+   <script>
+    let fruits =["mango", "apple", "guava","pig" ];
+    fruits.push("jack","orange");
+
+    document.getElementById("push").innerHTML=fruits;
+    
+   </script>
+
+   <hr>
+
+   <h2>pop method</h2>
+
+    <p id="pop"></p>
+
+    <script>
+        fruits=["mango","apple","orange","pineapple"];
+        let removed = fruits.pop();
+
+        document.getElementById("pop").innerHTML=removed;
+        
+    </script>
+    <hr>
+    
+<h2>shift method</h2>
+<p id="shift"></p>
+
+<script>
+
+    fruits=["apple","mango","guava","pineapple"];
+    fruits.shift();
+
+    document.getElementById("shift").innerHTML=fruits;
+
+
+</script>
+<hr>
+<h2>shift method</h2>
+<p id="shift1"></p>
+
+<script>
+
+    fruits=["apple","mango","guava","pineapple"];
+   
+
+    document.getElementById("shift1").innerHTML=fruits.shift();
+
+    
+</script>
+
+<hr>
+
+<h2>unshift</h2>
+
+<p id="unshift"></p>
+<script>
+    fruits=["apple","mango","pig","lemon"];
+    fruits.unshift("jack","jamun");
+
+    document.getElementById("unshift").innerHTML=fruits;
+
+
+</script>
+
+
+
+     
+</body>
+</html>

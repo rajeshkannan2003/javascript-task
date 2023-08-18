@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Js Topics</title>
+    </head>
+    <body>
+        <div>
+            <h1>Js Topics</h1>
+            <div>
+                <h2>String</h2>
+
+                <input type="text" id="str" name="str"/>
+                <input type="text" id="srEle" name="srEle"/>
+                <button type="button" onclick="strFunc()">String Functions</button>
+                <p id="strOp"></p>
+
+                <script>
+                    function strFunc(){
+                        let str = document.getElementById("str").value;
+                        let srEle = document.getElementById('srEle').value;
+                        let strOp = "";
+
+                        strOp += "Length : " + str.length ; //length
+                        strOp += "<br> Index Of : " + str.indexOf(srEle);
+                        strOp += "<br> Last Index Of : " + str.lastIndexOf(srEle);
+                        strOp += "<br> Includes : " + str.includes(srEle);
+                        strOp += "<br> Split : " + str.split(srEle);
+                        strOp += "<br> UpperCase : " + str.toUpperCase(srEle);
+                        strOp += "<br> LowerCase : " + str.toLowerCase(srEle);                        
+                        strOp += "<br> StartsWith : " + str.startsWith(srEle);
+                        strOp += "<br> EndsWith : " + str.endsWith(srEle);                        
+                        strOp += "<br> ChartAt : " + str.charAt(srEle);
+                        strOp += "<br> Replace : " + str.replace(srEle, srEle+srEle);
+                        strOp += "<br> Repeat : " + str.repeat(srEle);
+                        //strOp += "<br> subString : " + str.subString(srEle);
+                        strOp += "<br> PadStart : " + str.padStart(40,srEle);
+                        strOp += "<br> PadEnd : " + str.padEnd(40,srEle);
+                        //strOp += "<br> Search : " + str.search(srEle);
+                        strOp += "<br> Concat : " + str.concat(srEle);                        
+                        strOp += "<br> Before Trim : " + str;
+                        strOp += "<br> Trim : " + str.trim();
+                        strOp += "<br> Slice : " + str.slice(srEle);
+
+                        console.log("Before Trim : " + str);
+                        console.log("Trim : " + str.trim());
+
+                        document.getElementById('strOp').innerHTML = strOp;
+                    }
+                </script>
+            </div>
+        </div>
+        <div>
+            <p>string repeat method</p>
+            <input type="text" id="str1" name="str1"/>
+                <input type="text" id="strep" name="strep"/>
+                <button type="button" onclick="strrep()">String Functions</button>
+                <p id="repeat"></p>
+                <script>
+                    
+                    
+                </script>
+
+        </div>
+        
+        
+    </body>
+
+</html>

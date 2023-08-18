@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Js Example</title>
+    </head>
+    <body onload="printSomething()">
+        <h2> Js Example</h2>
+
+
+        <script>
+
+            let firstName = "Harish";
+            var lastName = "Gopi";
+            const age = 20;
+            let isMajor = true;
+
+            printData();
+            /*console.log(firstName);
+            console.log(lastName);
+            console.log(age);
+            console.log(isMajor);
+*/
+            firstName = "Aparna";
+            lastName = "Rajesh25sss";
+            //age = 25;
+            isMajor = false;
+
+            function printData(){
+                
+            console.log(firstName);
+            console.log(lastName);
+            console.log(age);
+            console.log(isMajor);
+            }
+
+            printData();
+
+            console.log(compName);
+            //console.log(salary);
+
+            var compName = "CTS";
+            let salary = "6LPA";
+
+            console.log(compName);
+            console.log(salary);
+            
+            var result = 0;
+            var v1 = 10;
+            var v2 = 5;
+            function add(val1, val2){
+                console.log(val1, val2,(val1+val2));
+                result = val1 + val2;
+            }
+            function sub(val1, val2){
+                return val1 - val2;
+            }
+            function mul(){
+                result = v1 * v2;
+            }
+            function div(){
+                return v1/v2;
+            }
+
+            console.log(add(50,50));
+            console.log(result);
+            console.log(sub(100,50));
+            let res = sub(300,50);
+            console.log(res);
+            mul();
+            console.log(result);
+            console.log(div());
+            console.log(sub(result,res));
+
+
+            add(add(300,100), div());
+
+            function getUserInfo(){
+
+                let user = document.getElementById('user').value;
+                let pswd = document.getElementById('pswd').value;
+                console.log(user,pswd);
+                console.log(document);
+                console.log(document.getElementById('user'));
+            }
+
+            function printSomething(){
+                alert("Function is called");
+                console.log("Function is called...");
+            }
+
+        </script>
+
+
+        <div>
+            <form>
+                Username: <input type="text" id="user" name="user"/><br>
+                Password: <input type="password" id="pswd" name="pswd"/><br>
+                <label onclick="getUserInfo()">Login</label>
+                <input type="reset" value="Cancel"/> 
+            </form>
+        </div>
+        <div>
+            <img src="../images/image.jpg" onclick="printSomething()"/>
+            
+            <img src="../../aboobacker/images/download (1).jpg" onmouseout="printSomething()"/>
+            
+            <input type="text" id="sam" name="sam" onkeypress="printSomething()"/>
+            <p onselect="printSomething()">jhdvb ijhdfb vnkjb jdfb vm fhjbf v </p>
+            <select onchange="printSomething()">
+                <option>TN</option>
+                <option>KL</option>
+                <option>KA</option>
+                <option>TL</option>
+            </select>
+
+            <input type="radio" id="gmale" name="gender" onselect="printSomething()" value="male"/>Male
+            <input type="radio" id="gfemale" name="gender" onselect="printSomething()" value="female"/>Female
+            <input type="radio" id="gothers" name="gender" onselect="printSomething()" value="others"/>Others
+        </div>
+    </body>
+</html>
+

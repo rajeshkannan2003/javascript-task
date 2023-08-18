@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salary calculation</title>
+</head>
+<body>
+    <form action="" method="">
+        salary:<input type="number" id="salary" value="salary" name="">
+        exp:<input type="number" id="exp" value="exp" >
+        total salary: <input type="number" id="tlsal">
+        <!-- <button onclick="sal()" >click</button> -->
+        <input type="button"  id="btn" name="btn" onclick="sal()">
+        
+    </form>
+    <script>
+        function sal(){
+
+        let salary =Number(document.getElementById("salary").value);
+         console.log(salary);
+        
+        let exp =Number(document.getElementById("exp").value);
+        console.log(exp);
+    if(salary<20000 && exp<3)
+    {
+       document.getElementById("tlsal").value=Number((salary*5/100)+salary);
+      
+       console.log(tlsal);
+
+    }else document.getElementById("tlsal").value=Number(salary);
+
+    
+
+        }
+
+
+
+    </script>
+
+
+    <!-- loop  ex -->
+      <!-- <h2>loop</h2> -->
+      <!-- <script> 
+        function loopex() {
+          
+          for(let decre=0; decre=>10; decre--) {
+            console.log(decre);
+          }
+          
+          
+        }
+        
+        loopex();
+          
+
+        
+
+
+       
+
+      </script>-->
+
+
+      
+    
+</body>
+</html>

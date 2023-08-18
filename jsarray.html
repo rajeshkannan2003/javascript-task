@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div> 
+        <h3>Finding duplicate values in a JavaScript array</h3>
+        <p>Here, we will find the repeating values in the given array.</p>
+        <p>Original array: [6, 9, 15, 6, 13, 9, 11, 15]</p>
+        <p id="result"></p>
+        <script>
+           //simple traversal method
+           let arra = [6, 9, 15, 6, 13, 9, 11, 15];
+           let index = 0, newArr = [];
+           const length = array.length; // to get length of array
+           function findDuplicates(arr) {
+              for (let i = 0; i < length - 1; i++) {
+                 for (let j = i + 1; j < length; j++) {
+                 if (arr[i] === arr[j]) {
+                       newArr[index] = arr[i];
+                       index++;
+                    }
+                 }
+              }
+              return newArr;
+           }
+           document.getElementById('result').innerHTML = 'Duplicate values are: <b>' + findDuplicates(array) + '</b>';
+        </script>
+    </div>-->
+    <br><hr>
+
+    <div>
+        <p>Original array: [3, 8, 7, 5, 3, 9, 8]</p>
+        <p id="result"></p>
+        <script>
+           // using set() and has() method
+           const array = [3, 8, 7, 5, 3, 9, 8];
+           const uniqueSet = new Set(array);
+           const filteredElements = array.filter(currentValue => {
+                 if (uniqueSet.has(currentValue)) {
+                    uniqueSet.delete(currentValue);
+                 }
+                 else {
+                    return currentValue;
+                 }
+              }
+           );
+           document.getElementById('result').innerHTML = 'Duplicate values are: <b>' + filteredElements + '</b>';
+        </script>
+     
+      </div>
+
+      <div>
+         <h4>Task-8 Move one to an end of an array</h4>
+    <div>
+        arr5=[5,1,6,9,1,1,5,3,1,6]
+    </div>
+     <button type="button" onclick="moveone()">Move</button>
+     <div id="ans8"></div>
+
+         <script>
+             
+             function moveone(){
+            let arr5=[5,1,6,9,1,1,5,3,1,6];
+            let one=[];
+            let onecount=0;
+            for(i=0;i<arr5.length;i++)
+            {
+                if(arr5[i]!=1){
+                    one.push(arr5[i]);
+                }
+                else{
+                    onecount++;
+                }
+            }
+            for(let i=0;i<onecount;i++){
+                one.push(1);
+            }
+            document.getElementById('ans8').innerHTML=one;
+        }
+         </script>
+      </div>
+
+     
+    
+</body>
+</html>

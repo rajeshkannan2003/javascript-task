@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Task</title>
+</head>
+<body>
+    <h4>Task-1 search an Element in an array</h4>
+    <input type="text" id="search">
+    <button type="button" onclick="element()">Result</button>
+    <p id="ans1"></p>
+    <hr><br>
+
+
+
+    <h4>Task-2 Remove on Given Element</h4>
+    <input type="text" id="ele1" placeholder="Enter The Your Element">
+    <button type="button" onclick="removeelement()">Remove</button>
+    <p id="ans2"></p>
+    <hr><br>
+
+
+    <h4>Task-3 Compare 2 array and find the similar element</h4>
+     <div>
+        arr1=[1,2,3,4,5,6,7,8,9] <br>
+        arr2=[1,3,5,7,9] 
+     </div><br>
+     <button type="button" onclick="similar()">
+        Find The similar Element
+     </button>
+     <div id="ans3"></div>
+     <hr><br>
+
+
+     <h4>Task-4 Compare 2 array and find the unique element</h4>
+      <div>arr1 =[1,2,3,4,5,6,7,8,9] <br>
+           arr2 =[1,3,5,7,9]
+    </div><br>
+    <button type="button" onclick="unique()">Find The unique Element </button>
+    <div id="ans4"></div>
+    <br><hr>
+ 
+
+    <h4>Task-5 Remove Duplicates from an array</h4>
+    <div>Arr3=[1,2,3,1,5,3,7,5,9,9]</div>
+    <button type="button" onclick="Duplicate()">Remove</button>
+    <div id="ans5"></div>
+    <br><hr>
+
+    <h4>Task-6 Find  Duplicates element from an array</h4>
+    <div>Arr3=[1,2,3,1,5,3,7,5,9,9]</div>
+    <button type="button" onclick="findDuplicate()">Find</button>
+    <div id="ans6"></div>
+    <br><hr>
+
+
+    <h4 > Task-7 sort an array</h4>
+    <div>array4=[6,5,47,4,5,5,8,4,7,8,3]</div>
+    <button type="button" onclick="sortarray()">Sort</button>
+    <div id="ans7"></div>
+    <br><hr>
+
+
+    <h4>Task-8 Move zero's to an end of an array</h4>
+    <div>
+        arr5=[5,0,6,9,0,0,5,3,0,6]
+    </div>
+     <button type="button" onclick="movezero()">Move</button>
+     <div id="ans8"></div>
+
+
+    <script>
+        function element(){
+             let arr=[1,2,3,4,5,6,7,8,9];
+             let count=0;
+            let a=Number(document.getElementById('search').value);
+            for(let i=0; i<arr.length;i++){
+                if(a==arr[i]){
+                    count++;
+                }
+            }
+            if(count>=1){
+                document.getElementById('ans1').innerHTML="Number found";
+            }else{
+                document.getElementById('ans1').innerHTML="Number not found"
+            }
+        }
+
+        function removeelement(){
+            let array=[10,20,30,40,50,60,70,80,90];
+            let count=0;
+            let a=Number(document.getElementById('ele1').value);
+            for(let i=0;i<array.length;i++){
+                if(a==array[i]){
+                    array.splice(i,1);
+                }
+            } 
+           
+            document.getElementById('ans2').innerHTML=array;
+
+        }
+
+
+
+        function similar(){
+            let arr1=[1,2,3,4,5,6,7,8,9];
+            let arr2=[1,3,5,7,9];
+            let count=0;
+            for(let i=0; i<arr1.length;i++){
+                for(let j=0;j<arr2.length;j++){
+                    if(arr1[i]==arr2[j]){
+                        document.getElementById('ans3').innerHTML+=arr1[i]+","
+                    }
+                }
+            }
+        }
+
+
+        function unique(){
+            let arr1 =[1,2,3,4,5,6,7,8,9];
+            let arr2 =[1,3,5,7,9];
+            let uniquecount =0;
+            let unique=[];
+            for(let i=0; i<arr1.length;i++){
+                for(let j=0; j<arr2.length;j++){
+                    if(arr1[i]!=arr2[j]){
+                       uniquecount++; 
+                    }
+                }
+                if(uniquecount==arr2.length){
+                    unique.push(arr1[i]);
+                }
+                uniquecount=0;
+            }
+            document.getElementById('ans4').innerHTML=unique;    
+        }
+
+
+
+        function Duplicate(){
+            let arr3=[1,2,3,1,5,3,7,5,9,9];
+
+            for(i=0;i<arr3.length;i++)
+            {
+                for( let j=i+1;j<arr3.length;j++)
+                {
+                    if(arr3[i]==arr3[j])
+                    {
+                        arr3.splice(j,1);
+                    }
+                }
+            }
+            document.getElementById('ans5').innerHTML=arr3;
+        }
+
+
+
+        function findDuplicate(){
+            let arr3=[1,2,3,1,5,3,7,5,9,9];
+            let enter=[];
+            for(let i=0;i<arr3.length;i++){
+                for( let j=i+1;j<arr3.length;j++){
+                    if(arr3[i]==arr3[j]){
+                       enter.push(arr3[i]); 
+                    }
+                }
+            }
+            document.getElementById('ans6').innerHTML= enter;
+        }
+
+        function sortarray(){
+               let array4=[6,5,47,4,5,5,8,4,7,8,3];
+               temp=0;
+               for(i=0;i<array4.length;i++){
+                 for( let j=i+1;j<array4.length;j++){
+                    if(array4[i]>array4[j]){
+                        temp=array4[i];
+                        array4[i]=array4[j];
+                        array4[j]=temp;
+                    }
+                 }
+               }
+               document.getElementById('ans7').innerHTML=array4;
+        }
+
+
+
+        function movezero(){
+            let arr5=[5,0,6,9,0,0,5,3,0,6];
+            let zero=[];
+            let zerocount=0;
+            for(i=0;i<arr5.length;i++)
+            {
+                if(arr5[i]!=0){
+                    zero.push(arr5[i]);
+                }
+                else{
+                    zerocount++;
+                }
+            }
+            for(let i=0;i<zerocount;i++){
+                zero.push(0);
+            }
+            document.getElementById('ans8').innerHTML=zero;
+        }
+    </script>
+</body>
+</html>

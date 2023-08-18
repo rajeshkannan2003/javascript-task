@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(1+ "2" + "2")
+        console.log(1+ +"2" + "2")
+        console.log(1+ -"1" + "2")
+        console.log(+"1" + "2" + "2")
+        console.log("a" - "b" + "2")
+        console.log("a" - "b" + 2)
+
+        console.log("0 || 1 =" +(0 || 1));
+        console.log("1 || 2 =" +(1 || 2));
+        console.log("0 && 1 =" +(0 && 1));
+        console.log("1 && 2 =" +(1 && 2));
+
+
+
+    </script>
+    <h2 id="reverse"> </h2>
+    <script>
+        let arr =  [43,"what",9,true,"cannot",false,"be",3,true];
+        arr.reverse();
+        console.log(arr)
+       //document.getElementById('reverse').innerhtml= arr.reverse();
+     
+
+    </script>
+    <hr><hr>
+    <br>
+    qus:this is a code wars kata.click here to train on "grasshopper-summation" <br>
+    \\example output: <br>
+    \\1+2=3, 1+2+3+4+5+6+7+8=36 
+    <br>
+    
+    num : <input type="text" id="value">
+    <button onclick="summation()">factorial</button>
+    <input type="text" id="ans">
+    <script>
+        function summation(){
+            let value = document.getElementById('value').value;
+            fact = 0;
+
+            for( i=1 ; i<=value ; i++){
+                fact = fact + i;
+            }
+            document.getElementById('ans').value=fact;
+        }
+    </script>
+
+    <hr>
+    <br>
+    qus ; given a number n calculate the factorial of the number <br>
+
+    ex ouput// 4*3*2*1=24
+    <br>
+
+
+
+    num : <input type="text" id="num">
+    <button onclick="factorial()">factorial</button>
+    <input type="text" id="result">
+    <script>
+        function factorial(){
+            let num = document.getElementById('num').value;
+            fact = 1;
+
+            for( i=1 ; i<=num ; i++){
+                fact = fact*i;
+            }
+            document.getElementById('result').value=fact;
+        }
+    </script>
+
+    <hr>
+
+    <!-- <div>  
+
+    pin: <input type="text" value="" id="pin"> 
+    confirm pin : <input type="text" value="" id="cpin">
+    <button onclick="find()">search</button>
+    <h2 id="result"></h2>
+
+
+    <script> 
+      function find() {
+         let pin = document.getElementById('pin').value;
+         let cpin = document.getElementById('cpin').value;
+
+         for ( let i=0 ; i<pin.length ; i++){
+             for ( let j=0 ; j<cpin.length ; j++){
+                 if(pin[i]==cpin[j]){
+                     document.getElementById('result').innerHTML = "that was correct!";
+
+                 }
+                 else{
+                     document.getElementById('result').innerHTML = "sorry that was wrong";
+
+                    }
+                }
+            }
+        }
+    </script>
+
+    </div>-->
+    
+    <!-- <div> 
+        <h2 id="summation"></h2>
+        <script>
+            let array = [10,20,30,40,50];
+            sum= "";
+
+            for (i=0 ; i<array.length ; i++) {
+                if (sum+i){
+                    
+                }
+
+            }
+            console.log(sum);
+
+        </script>
+    </div>-->
+
+    <div> 
+        pin: <input type="text" value="num" id="pin"> 
+    confirm pin : <input type="text" value="number" id="cpin">
+    <button onclick="search()">search</button>
+    <h2 id="result"></h2>
+     <script> 
+     function search ()  {
+        let pin = document.getElementById('pin').value;
+        let cpin = document.getElementById('cpin').value;
+        for ( let i=0 ; i<pin.length ; i++){
+            for ( let j=0 ; j<cpin.length ; j++){
+                if ( pin[i]==cpin[j]){
+                     document.getElementById("result").innerHTML = "that was correct!";
+                   
+                }
+                else {
+                     document.getElementById("result").innerHTML = "sorry that was wrong";
+                
+                }
+
+                   
+                
+            }
+        } 
+     }
+    </script>
+ </div>
+<script>
+    let str = "Hello, World!";
+let reversed = str.split('').reverse().join('');
+console.log(reversed); // Output: "!dlroW ,olleH"
+
+    
+   
+ 
+
+</script>
+
+    
+   
+  
+
+
+    
+        
+        
+</body>
+</html>

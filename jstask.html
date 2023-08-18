@@ -1,0 +1,299 @@
+<html>
+
+<head>
+    <title>Task 03.04.2023</title>
+</head>
+
+<body>
+    <h3>Task 1:Find the largest of the given 2</h3>
+    Value 1:<input type="text" name="" value="" id="val1">
+    Value 2:<input type="text" name="" value="" id="val2">
+    <h2 id="largest"></h2>
+
+    <button type="buttton" onclick="largest()">Find</button>
+
+
+    <br>
+    <br>
+    Largest Number:<h3 id="Largest"></h3>
+    <hr>
+    <h3>Task 2:Find the largest of the given 3</h3>
+    Value 1:<input type="text" name="" value="" id="val3">
+    Value 2:<input type="text" name="" value="" id="val4">
+    Value 3:<input type="text" name="" value="" id="val5">
+    <button type="button" onclick="Largest3()">Find</button>
+    <h3 id="Greatest3"></h3>
+    <hr>
+
+    <h3>Task 3:Check whether the given number is positive or negative</h3>
+    Num :<input type="text" name="num" value="" id="num">
+    <button type="button" id="Result3" onclick="pon()">Result</button>
+    <h3 id="pon"></h3>
+
+    <hr>
+    <h3>Task 4:Check whether the year is leap year or not</h3>
+    Year :<input type="text" name="" value="" id="y1">
+    <h4 id="Leap"></h4>
+    <button type="button" onclick="LeapYear()">Check</button>
+    <hr>
+
+    <h3>Task 5:Input a string whether it is Vowel or not</h3>
+    String :<input type="text" name="" value="" id="String">
+    <button type="button" name="" value="" id="result5" onclick="vowels()">Check</button>
+    <h3 id="Vowels"></h3>
+    <hr>
+
+    <h3>Task 6:Check whether the given number of string is alphabet or number</h3>
+    Enter any character or number:<input type="text" name="" value="" id="sn">
+    <button type="button" name="" value="" id="" onclick="Sn()">Check</button>
+    <h3 id="snc"></h3>
+    <hr>
+
+
+
+    <h3>Task 7:Input a number to find the month</h3>
+    Input :<input type="text" name="" value="" id="mth">
+    <button type="button" name="" value="" id="" onclick="nmth()">Result</button>
+     <h3 id="ftm"></h3>
+     <hr>
+     
+     <h3>Task 8:Find the grade according to the given marks</h3>
+     Enter marks:<input type="text" name="" value="" id="mark">
+     <button type="text" name="" value="" id="" onclick="grade()">Grade</button>
+     <h3 id="mresult"></h3>
+    <hr>
+
+     <h3>Task 9:Find the employees salary whose experience is greater than or equal 3 years and salary should be less than 20,000 then give 5% bonus</h3>
+     Enter basic pay: <input type="text" name="" value="" id="bpay">
+     Enter experience: <input type="text" name="" value="" id="exp">
+     
+     <button type="button" name="" value="" onclick="amount()">Result</button>
+     <h3 id="famount"></h3>
+     <h3 id="f1amount"></h3>
+    <hr>
+
+    <h3>Task 10:In a shop when you purchase item more than Rs.1000 you will rewarded 10% bonus else when the amount is
+        less than Rs.1000 then no discount.Find the total amount after discount</h3>
+    Enter Amount:<input type="text" name="" value="" id="Amt">
+    <button type="button" onclick="dis()">Result</button>
+    <h3 id="Adis0"></h3>
+    <h3 id="Adis1"></h3>
+    <h3 id="Adis"></h3>
+
+
+
+
+
+    <script>
+        function largest() {
+            let v1 = Number(document.getElementById('val1').value);
+            let v2 = Number(document.getElementById('val2').value);
+            
+
+            if (v1 > v2) {
+                largest = v1;
+                document.getElementById('Largest').innerHTML = "The largest number is: " + largest;
+            }
+            else {
+                largest = v2;
+                document.getElementById('Largest').innerHTML = "The largest number is: " + largest;
+            }
+
+        }
+
+        function Largest3() {
+            let a = Number(document.getElementById('val3').value);
+            let b = Number(document.getElementById('val4').value);
+            let c = Number(document.getElementById('val5').value);
+            //let = largest2;
+            if (a > b && a > c) {
+                largest2 = a;
+                document.getElementById('Greatest3').innerHTML = "The Largest number is:" + largest2;
+            }
+            else if (b > a && b > c) {
+                largest2 = b;
+                document.getElementById('Greatest3').innerHTML = "The Largest number is:" + largest2;
+            }
+            else {
+                largest2 = c;
+                document.getElementById('Greatest3').innerHTML = "The Largest number is:c" + largest2;
+            }
+
+        }
+
+        function pon() {
+            let n = Number(document.getElementById('num').value);
+            let result3 = document.getElementById('num').value;
+            if (n > 0) {
+                document.getElementById('pon').innerHTML = "The given number is positive:" + result3;
+            }
+            else if (n < 0) {
+                document.getElementById('pon').innerHTML = "The given number is negative:" + result3;
+            }
+            else {
+                document.getElementById('pon').innerHTML = "The given number is positive:" + result3;
+            }
+        }
+
+        function LeapYear() {
+            let y1 = Number(document.getElementById('y1').value);
+            let result4 = document.getElementById('y1').value;
+            if ((y1 % 4) == 0) {
+                document.getElementById('Leap').innerHTML = "The given year is Leap Year" + result4;
+            }
+            else {
+                document.getElementById('Leap').innerHTML = "The given year is not a Leap Year" + result4;
+            }
+        }
+
+        function vowels()
+        {
+        let s1 = document.getElementById('String').value;
+        let result5 = document.getElementById('String').value;
+        
+            if (s1 == 'a' || s1 == 'e' || s1 == 'i' || s1 == 'o' || s1 == 'u') {
+                document.getElementById('Vowels').innerHTML = "The given string is a vowel:" + result5;
+            }
+            else {
+                document.getElementById('Vowels').innerHTML = "The given string is not  vowel:" + result5;
+            }
+        }
+
+        function Sn()
+        {
+            let sn=document.getElementById('sn').value;
+            let result6=document.getElementById('sn').value;
+            Number(sn);
+                if(Number(sn)>=0 || Number(sn)<0)
+                {
+                    document.getElementById('snc').innerHTML="Number";
+                }
+                else{
+                    document.getElementById('snc').innerHTML="Alphabet";
+                }
+        }
+
+        function nmth()
+        {
+            let num=document.getElementById('mth').value;
+
+            if(num==1)
+            {
+                document.getElementById('ftm').innerHTML="January";
+            }else if(num==2)
+            {
+                document.getElementById('ftm').innerHTML="February"; 
+            }else if(num==3)
+            {
+                document.getElementById('ftm').innerHTML="March";
+            }
+            else if(num==4)
+            {
+                document.getElementById('ftm').innerHTML="April";
+            }
+            else if(num==5)
+            {
+                document.getElementById('ftm').innerHTML="May";
+            }
+            else if(num==6)
+            {
+                document.getElementById('ftm').innerHTML="June";
+            }
+            else if(num==7)
+            {
+                document.getElementById('ftm').innerHTML="July";
+            }
+            else if(num==8)
+            {
+                document.getElementById('ftm').innerHTML="August";
+            }
+            else if(num==9)
+            {
+                document.getElementById('ftm').innerHTML="September";
+            }
+            else if(num==10)
+            {
+                document.getElementById('ftm').innerHTML="October";
+            }
+            else if(num==11)
+            {
+                document.getElementById('ftm').innerHTML="November";
+            }
+            else if(num==12)
+            {
+                document.getElementById('ftm').innerHTML="December";
+            }
+            else{
+
+                alert("Invalid Input");
+            }
+        }
+
+        function grade() {
+            let mark = document.getElementById('mark').value;
+            let grade;
+            if (mark >= 90) {
+                grade = "A+";
+            } else if (mark >= 80) {
+                grade = "A";
+            } else if (mark >= 70) {
+                grade = "B";
+            } else if (mark >= 60) {
+                grade = "C";
+            } else if (mark >= 50) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+            document.getElementById('mresult').innerHTML = mark;
+        }
+
+
+        function amount()
+         {
+            let bpay=Number(document.getElementById('bpay').value);
+            let exp=Number(document.getElementById('exp').value);
+            let amt=0;
+            let result="";
+
+            if(bpay<=20000 && exp>=3)
+                {
+                    document.getElementById('famount').innerHTML="Amount before bonus"+bpay;
+                    amt=bpay*5/100;
+
+                    result=bpay+amt;
+                    document.getElementById('f1amount').innerHTML="Final amount after bonus"+result;
+
+                }
+                else{
+                    amt=bpay;
+                    document.getElementById('famount').innerHTML=amt;
+                }
+         }
+
+
+         function dis() {
+            let Amt = document.getElementById('Amt').value;
+            let adis = "";
+            let result = "";
+            document.getElementById('Adis0').innerHTML = "Original Amount: " + Amt;
+            document.getElementById('Adis1').innerHTML = "Amount before  discount: " + Amt;
+            if (Amt >= 1000) {
+               
+                adis = 1000 * 10 / 100;
+                console.log(adis);
+                result = Amt-adis;
+                console.log(result);
+                document.getElementById('Adis').innerHTML = "Amount After discount: " + result;
+
+            }
+            else {
+                result = Amt
+                document.getElementById('Adis').innerHTML ="No discount: "+ result;
+            }
+        }
+       
+    </script>
+</body>
+
+</html>

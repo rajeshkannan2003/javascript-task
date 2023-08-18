@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+    <h2>Array + Arrow functions</h2>
+                <script>
+                    arrArrow();
+                    function arrArrow(){
+                        let arr = [11,51,57,75,3];
+
+                        console.log(arr);
+                        console.log(arr.filter(num => { return num%2 == 0 }));
+                        console.log(arr.map(num => { 
+                            return num * 10;
+                        }));
+                        arr.forEach(num => { console.log(num);});
+                        console.log(arr.some(num => num%2!=0));
+                        console.log(arr.every(num => num%2!=0));
+                        for(let n of arr){
+                            console.log(n);
+                        }
+                    }
+                </script>
+</body>
+</html>

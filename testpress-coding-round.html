@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="reverse"> 1. Write a program to print the reverse of the given string.</h2>
+    <script>
+       let str = "JAVASCRIPT";
+       let reversed = str.split('').reverse().join('');
+         console.log(reversed);
+        
+
+       
+     
+
+    </script>
+    <hr>
+
+
+    <h2>2. Given a number, check whether it is a prime number or not.</h2>
+    NUMPER: <input type="text" name="" class="" id="y1">
+        <h3 id="leap"></h3>
+        <button type="button" onclick="leapyear()" id="result">Check</button>
+        <script>
+            function leapyear() {
+                let y1 =(document.getElementById('y1').value );
+               // let result4 = document.getElementById('y1').value;
+                if ( (y1 % 2) == 0){
+                    document.getElementById('leap').innerHTML = "no " ;
+                }
+                else  {
+                    document.getElementById('leap').innerHTML = "yes " ;
+                    
+                }
+            }
+        </script>
+        <hr>
+        <h2>3.Given an array of numbers, arrange them in a way that it forms the largest value.</h2>
+        <script>
+            function largestNumber(arr) {
+                arr.sort(function (a, b) {
+                  let num1 = String(a) + b;
+                  let num2 = String(b) + a;
+                  return num2 - num1;
+                });
+              
+                return arr.join('');
+              }
+              
+              
+              let numbers = [34, 346, 587, 64];
+              let largest = largestNumber(numbers);
+              console.log(largest);
+            
+            
+        </script>
+        <hr>
+
+        <h2>4.Given a number N, print reverse of number N.</h2>
+        <script>
+            function reverseNumber(n) {
+                let reversed = String(n)
+                  .split('')
+                  .reverse()
+                  .join('');
+              
+                return parseInt(reversed, 10);
+              }
+              
+              
+              let number = 500;
+              let reversedNumber = reverseNumber(number);
+              console.log(reversedNumber);
+              
+        </script>
+
+        <hr>
+        <h2>5. Given an array of numbers, find the maximum and minimum element in the array.</h2>
+        <script>
+            function findMaxAndMin(arr) {
+                let max = Math.max(...arr);
+                let min = Math.min(...arr);
+              
+                return `${max} ${min}`;
+              }
+              
+              
+              let num = [54, 999, 2293, 10];
+              let result = findMaxAndMin(num);
+              console.log(result); 
+              
+        </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>OOPS</h2>
+        <script>
+            
+            class Institue{
+
+                branchName = "Tambaram";
+                getAdmission(){
+                    console.log("Institute Admission..");
+                    /*try{
+                        throw new Error();
+                    }catch(err){
+                        console.log(err);
+                    }*/
+                    throw new Error();
+                }
+                getApplicationForm(form){
+                    console.log("Application Form Provided" + form);
+                }
+                getCertificate(){
+                    console.log("Course Certificate");
+                }
+                distributeForm(){
+                    console.log("Distribute Application Forms...");
+                    
+                }
+                constructor(){
+                    console.log("Constructor Called");
+                    this.distributeForm();
+                }
+                /*constructor(branchName){
+                    console.log("Parameterised Constructor Called");
+                    this.branchName = branchName;
+                }*/
+            }
+
+            console.log("*** OOPs ***");
+            let besant = new Institue("Chennai");
+            console.log(besant.branchName);
+            besant.getApplicationForm("Institue Form");
+            try{
+            besant.getAdmission();
+            }catch(err){
+                console.log(err);
+            }
+            besant.getCertificate();
+
+
+            class TrainingInstitute extends Institue
+            {
+                getCourseDetails(){
+                    console.log("Coures List");
+                }
+
+                getCertificate(){
+                    console.log("Training Institute Certificate...");
+                }
+
+                getCertificate(cert){
+                    console.log("Certificate :" + cert);
+                }
+            }
+
+            
+
+            let trnIns = new TrainingInstitute();
+            trnIns.getApplicationForm("Training Institute Form");
+            trnIns.getCourseDetails();
+            trnIns.getCertificate();
+            trnIns.getCertificate("Completion CRtificate");
+
+            let arrObj = new Array();
+            arrObj.push(52);
+            console.log(arrObj.length);
+
+            class ArrMari{
+                arrVar = [];
+                length = 0;
+                push(ip){
+                    this.arrVar[length] = ip;
+                    this.length++;
+                }
+                pop(){
+                    this.arrVar = this.arrVar.slice(0,this.arrVar.length-1);
+                    length--;
+                }
+
+                /*toString(){
+                    console.log(arrVar);
+                }*/
+            }
+
+            let arrMari = new ArrMari();
+            console.log(arrMari.length);
+            arrMari.push(63);
+            console.log(arrMari.length);
+            console.log(arrMari);
+
+            let arrMari2 = new ArrMari();
+            console.log(arrMari2);
+            arrMari2
+
+
+
+            class MyArr{
+
+                myArr = [];
+                length = 0;
+
+                push(ele){
+                    this.myArr[this.length]=ele;
+                    this.length++;
+                }
+
+                pop(){
+                    let temp = [];
+                    for(let indx =0; indx < this.length-1; indx++){
+                        temp[indx] = this.myArr[indx];
+                    }
+
+                    this.myArr = temp;
+                    this.length--;
+                }
+            }
+
+            let myArr = new MyArr();
+            myArr.push("Hello");  //arr.push();
+            myArr.push("Dog");
+            myArr.push("Cat");
+            console.log(myArr.length);
+            console.log(myArr);
+            myArr.pop();
+            console.log(myArr);
+            console.log(myArr.length);
+        </script>
+    </div>
+    
+</body>
+</html>

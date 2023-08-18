@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employ details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+<body>
+ <div style="padding: 20px;">
+        
+    userName :<input type="text" id="user" name="user"/>
+    userID  :<input type="text" id="usid" name="userID" / >
+    <button onclick="emop()" class="btn btn-primary">find</button>  
+    <button class="btn btn-danger">cancel</button>
+    </div>
+
+    <div class="table">
+       
+        <table>
+            
+                
+            <div>
+                <tr>
+                    <th>userID</th>
+                    <th>userName</th>
+                    <th>designatoin</th>
+                    <th>salary</th>
+                </tr>
+                
+            </div>
+           <div id="fazil" class="hiddiv" >
+            <tr >
+                <td>101</td>
+                <td>fazil</td>
+                <td>manager</td>
+                <td>50000</td>
+
+            </tr>
+           </div>
+            <div class="hiddiv" id="gopi" >
+                <tr >
+                    <td>102</td>
+                    <td>gopi</td>
+                    <td>admin</td>
+                    <td>52000</td>
+                </tr>
+            </div>
+            <div class="hiddiv" id="harish" >
+                <tr >
+                    <td>103</td>
+                    <td>harish</td>
+                    <td>developer</td>
+                    <td>45000</td>
+                </tr>
+            </div>
+            <div  id="german" class="hiddiv" >
+                <tr>
+                    <td>104</td>
+                    <td>german</td>
+                    <td>senior developer</td>
+                    <td>60000</td>
+                </tr>
+            </div>
+
+        </table>
+       
+    </div>
+     <style>
+        form{
+            visibility:hidden;
+    
+        }
+    </style>
+
+    <script>
+        let data=[[user='fazil',userID='101' , designatoin='manager', salary=50000]
+        [user='gopi',userID='102' , designatoin='admin', salary=52000]
+        [user='harish',userID='103' , designatoin='developer', salary=45000]
+        [user='german',userID='104' , designatoin='seniordeveloper', salary=60000]]
+        function emop() {
+            let userName  = document.getElementById('user').value;
+            let userID = document.getElementById('usid').value;
+            for (let i=0;i<userName.length ; i++){
+                for (let j=0;j<userID.length ; j++){
+                    if(userName==[i]&& userID==[j]){
+                        window.location.href="task.html"
+               
+                
+            }
+            else{   
+                
+            }
+
+                }
+            
+        }
+
+
+           
+
+        }
+    </script> 
+
+
+    
+</body>
+</html>

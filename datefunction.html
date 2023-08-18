@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date function</title>
+</head>
+<body>
+
+<div>
+    <h2>Date</h2>
+    <p id="dtOp"></p>
+    <p id="countDownOp"></p>
+    <p id="clockCountOp"></p>
+    <script>
+        dateEx();
+        function dateEx(){
+            let result = "";
+            let dt = new Date();
+            result += dt;
+            console.log(new Date());
+            result += "<br> Year : " + dt.getFullYear();
+            result += "<br> Month : " + dt.getMonth();
+            result += "<br> Day : " + dt.getDay();
+            result += "<br> Date : " + dt.getDate();
+            result += "<br> Hour : " + dt.getHours();
+            result += "<br> Minute : " + dt.getMinutes();
+            result += "<br> Milliseconds : " + dt.getMilliseconds();
+            result += "<br> Time : " + dt.getTime();
+            
+            result += "<br> Changed Date : " + dt;
+            result += "<br> Milliseconds Per Day : "+ 24*60*60*1000;
+            result += "<br> Seconds Per Day : "+ 24*60*60;
+            result += "<br> Mintues Per Day : "+ 24*60;
+            result += "<br> Next Day : " + new Date(dt.getTime() + (24*60*60*1000));
+            result += "<br> 30 Minutes+ : " + new Date(dt.getTime() + 30*60*1000);
+            result += "<br> 2 Hours+ : " + new Date(dt.getTime() + 2*60*60*1000);
+            dt.setFullYear(2024);
+            dt.setDate(8);
+            dt.setMonth(10);
+            document.getElementById('dtOp').innerHTML = result;
+
+        }
+        setInterval(clockCount,1000);
+        function clockCount(){
+            let dt = new Date();
+            document.getElementById('clockCountOp').innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+        }
+        setInterval(countDown,1000);
+        var sec=60;
+        var mins=30;
+        function countDown(){
+            if(mins>=0){
+                document.getElementById("countDownOp").innerHTML = mins + ":" + sec;
+                if(sec>0)
+                    sec--;
+                else if(sec==0){
+                    mins--;
+                    sec=60;
+                }
+            }
+            
+        }
+    </script>
+</div>
+
+</body>
+</html>

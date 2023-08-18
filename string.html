@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string task</title>
+</head>
+<body>
+    <div>
+        <h2> task-1 Concat</h2>
+        <input type="text" id="input1" name="input1">
+        <input type="text" id="input2" name="input2">
+        <button type="button" onclick="concat()">Send Output</button>
+        <p id="ans1"></p>
+        <br><hr>
+        <h2>task-2 ChartAt</h2>
+        <input type="text" id="chart" name="chart">
+        <input type="text" id="chart2" name="chart2">
+        <button type="button" onclick="ChartAt()">Send Output</button>
+        <div id="ans2"></div>
+        <br><hr>
+
+
+        <h2>Task-3 Startwith</h2>
+        <input type="text" id="start" name="start">
+        <input type="text" id="start1" name="start2">
+        <button type="button" onclick="Startwith()">Send Output</button>
+        <p id="ans3"></p>
+        <br><hr>
+
+        <h2>Task-4 Endwith</h2>
+        <input type="text" id="end" name="end">
+        <input type="text" id="end2" name="end2">
+        <button type="button" onclick="Endwith()">Send Output</button>
+        <p id="ans4"></p>
+        <br><hr>
+
+
+        <h2>Task-5 Repeat </h2>
+        <input type="text" id="repeat1" name="repeat1">
+        <input type="text" id="repeat2" name="repeat2">
+        <button type="button" onclick="Repeat()">Send Output</button>
+        <p id="ans5"></p>
+        <br><hr>
+
+       <!-- <h2>Task-6 LowerCase</h2>
+        <input type="text" id="lower" name="lower">
+        <button type="button" onclick="toLowerCase()">Change the UpperCase</button>
+        <p id="ans"></p>
+        <br><hr> -->
+
+        <h2>Task-7 indexOf</h2>
+        <input type="text" id="index1" name="index1">
+        <input type="text" id="index2" name="index2">
+        <button type="button" onclick="indexof()">click me</button>
+        <p id="ans6"></p>
+        <br><hr>
+
+        <h2>Task-8 LastindexOf</h2>
+        <input type="text" id="ind1" name="index1">
+        <input type="text" id="ind2" name="index2">
+        <button type="button" onclick="Lastindexof()">click me</button>
+        <p id="ans7"></p>
+        <br><hr>
+
+        <h2>Task-9  trim</h2>
+        <input type="text" name="trim" id="trim">
+        <button type="button" onclick="trimmethod()">Click Me Extre Space Trim</button>
+        <pre id="ans8"></pre>
+        <pre id="ans8a"></pre>
+        <hr><br>
+
+        <h2>task-10  Replace method</h2>
+        String<input type="text" name="str1" id="str1"><br><br>
+        Find<input type="text" name="str2" id="str2"><br><br>
+        Replace by <input type="text" name="Replace" id="ReplaceBY"><br><br>
+        <button type="button" onclick="replace()">Pls Replace</button>
+        <p id="answer"></p>
+        <br><hr>
+        <script>
+            function concat(){
+                let start=document.getElementById('input1').value;
+                let end =document.getElementById('input2').value;
+                document.getElementById('ans1').innerHTML=start+end;
+            }
+
+
+            function ChartAt(){
+                let a=document.getElementById('chart').value;
+                let b=document.getElementById('chart2').value;
+                for(let i=0;i<a.length;i++)
+                {
+                    if(a[i]=b){
+                        document.getElementById('ans2').innerHTML=a[i];
+                    }
+                    else {
+                        document.getElementById('ans2').innerHTML=undefined;
+                       
+                    }
+                }
+            }
+
+            function Startwith(){
+                let count=0;
+                let a= document.getElementById('start').value;
+                let b = document.getElementById('start1').value;
+                for(i=0;i<b.length;i++){
+                    if(a[i]==b[i]){
+                        count++;
+                    }
+                }
+                if(count==b.length)
+                {
+                    document.getElementById('ans3').innerHTML=true;
+                }
+                else{
+                    document.getElementById('ans3').innerHTML=false;
+                }
+
+            }
+
+            function Endwith(){
+                let count=0;
+                let a=document.getElementById('end').value;
+                let b=document.getElementById('end2').value;
+                for(i=a.length-b.length;i<a.length;i++){
+                    let j=i-(a.length-b.length);
+                    if(a[i]==b[j]){
+                        count++;
+                    }
+                }
+                if(count==b.length){
+                    document.getElementById('ans4').innerHTML=true;
+                }
+                else{
+                    document.getElementById('ans4').innerHTML=false;
+                }
+            }
+
+
+            function Repeat(){
+                let a=document.getElementById('repeat1').value;
+                let b=document.getElementById('repeat2').value;
+                for(i=0;i<b;i++){
+                    document.getElementById('ans5').innerHTML+=a+""
+                }
+            }
+
+           /* function toLowerCase(){
+                let lower=document.getElementById('lower').value;
+                let small="a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z";
+                let caps ="A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z";
+                for( let i=0;i<lower.length;i++)
+                {
+                    for(let j=0;j<small.length;j++){
+                        if(lower[i]==caps[j]){
+                            document.getElementById('ans').innerHTML=caps[i];
+                        }
+                    }
+                }
+            }*/
+
+            function indexof(){
+               let a=document.getElementById('index1').value;
+               let b=document.getElementById('index2').value;
+               for( let i=0;i<a.length;i++){
+                if(a[i]==b){
+                    document.getElementById('ans6').innerHTML=i;
+                    break;
+                }
+               }
+            }
+
+            function Lastindexof(){
+               let a=document.getElementById('ind1').value;
+               let b=document.getElementById('ind2').value;
+               for(let i=a.length;i>=0;i--){
+                if(a[i]==b)
+                {
+                    document.getElementById('ans7').innerHTML=i;
+                    break;
+                }
+               }
+            }
+
+
+            function trimmethod(){
+                let start=document.getElementById('trim').value;
+                let stcount=0;
+                let ltcount=0;
+                let strop="";
+                for(i=0;i<start.length;i++)
+                {
+                    if(start[i]==" ")
+                    {
+                        stcount++;
+                    }
+                    else{
+                        break;
+                    }
+                }
+                for(let i=start.length-1;i>=0;i--)
+                {
+                    if(start[i]==" ")
+                    {
+                        ltcount++;
+                    } 
+                    else{
+                        break;
+                    }
+                }
+                for(let i=stcount;i<start.length-ltcount;i++){
+                    strop+=start[i];
+                }
+                document.getElementById('ans8').innerHTML=start;
+                document.getElementById('ans8a').innerHTML=strop;
+            }
+
+            function replace(){
+                let Output ="";
+                let str1 =document.getElementById('str1').value;
+                let str2 =document.getElementById('str2').value;
+                let ReplaceBY =document.getElementById('ReplaceBY').value;
+                let count=0;
+                for(inx=0;inx<str1.length;inx++){
+                    if(str1[inx]==str2 && count<1){
+                        Output+=ReplaceBY;
+                        count++;
+                    }else{
+                        Output+=str1[inx];
+                    }
+                    document.getElementById('answer').innerHTML=Output;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

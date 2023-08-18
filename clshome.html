@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic Login Home</title>
+</head>
+
+<body onload="checkSession()">
+        <div>
+            <h2>Dynamic Login Home</h2>
+            <h3>Welcome User : <span id="user"></span></h3>
+            <span style="float:right;"><button type="button" onclick="logoff()">LogOff</button></span>
+
+            <div id="Guest">
+                <h2> Guest Section </h2>
+            </div>
+            <div id="Member" class="hideDiv">
+                <h2> Member Section </h2>
+            </div>
+            <div id="Admin" class="hideDiv">
+                <h2> Admin Section</h2>
+            </div>
+        </div>
+        <style>
+            .hideDiv{
+                visibility: hidden;
+            }
+        </style>
+        <script>
+            function checkSession(){
+                let user = sessionStorage.getItem("User");
+                console.log(user);
+                if(user == null){
+                    window.location.href = "clsLogin.html";
+                }else
+                    getUser(user);
+            }
+            function getUser(user){
+                document.getElementById("user").innerHTML = user;
+                let memberDiv = document.getElementById("Member");
+                let adminDiv = document.getElementById("Admin");
+                let userType = sessionStorage.getItem("UserType");
+                if(userType == "Member"){
+                    memberDiv.style.visibility = "visible";
+                }else if(userType == "Admin"){
+                    memberDiv.style.visibility = "visible";
+                    adminDiv.style.visibility = "visible";
+                }
+            }
+            function logoff(){
+                sessionStorage.removeItem("User");
+                sessionStorage.removeItem("UserType");
+                checkSession();
+            }
+        </script>
+</body>
+</html>

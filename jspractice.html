@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js task</title>
+
+</head>
+<body>
+    <h3>Task 1:Find the largest of the given 2</h3>
+    value1: <input type="text" value="" id="val1">
+    value2: <input type=" text" value="" id="val2">
+
+    <button type="button" onclick="largest()">find</button>
+     <h3 id="largest"></h3>
+    <script>
+        function largest(){
+           let v1 =Number(document.getElementById("val1").value);
+           let v2=Number(document.getElementById("val2").value);
+            let largest=""
+
+            if (v1 > v2){
+                largest=v1;
+           (document.getElementById('largest')).innerHTML="the largest num is:" +  largest;
+            }
+
+                else{
+                largest = v2;
+                (document.getElementById('largest').innerHTML)="the largest num is: " + largest;
+                 }
+        
+
+
+
+        }
+    </script>
+    
+
+    <div>
+        <hr>
+    <h3>Task 2:Find the largest of the given 3</h3>
+
+    value1: <input type="text" name="" class="" id="val3">
+    value2: <input type="text" name="" class=" " id="val4">
+    value3: <input type="text" name="" class=" " id="val5">
+,
+    <button type="button" onclick="gratest()">Find</button>
+
+    <h3 id="Greatest3"></h3>
+
+    <script>
+        function gratest(){
+            let value1 = Number(document.getElementById('val3').value);
+            let value2=Number(document.getElementById('val4').value);
+            let value3 = Number(document.getElementById('val5').value);
+            let largest2;
+
+            if (value1 > value2 && value1 > value3) {
+                
+                gretest2 = value1;
+                document.getElementById('greatest3').innerHTML="The greatest value is= " + greatest2;
+
+            }
+            else if (value2 > value1 && value2 > value3) {
+                
+                gretest2 = value2;
+                document.getElementById('greatest3').innerHTML="The greatest value is= " + greatest2;
+
+            }
+
+            else{
+                 greatest2 = value3;
+                 document.getElementById('greatest3').innerHTML="The greatest value is= " + greatest2;
+
+                 
+            }
+
+
+
+        }
+    </script>
+
+    </div>
+    <hr>
+
+    <div>
+        <h3>Task 3:Check whether the given number is positive or negative</h3>
+        Number: <input type="number" name="num" class=" " id="num">
+        <button type="button" id="task3" onclick="positive()">result</button>
+        <h3 id="pos"></h3>
+
+        <script>
+            function positive(){
+
+                let n = number(document.getElementById('num').value);
+                let task3 = document.getElementById('num').value;
+
+                if (n > 0){
+
+                    document.getElementById('task3').innerHTML="the num is positive=" + task3;
+                }
+                else if (n < 0) {
+                    document.getElementById('task3').innerHTML="the num is negative= "+ task3;
+                }
+                else {
+                    document.getElementById('task3').innerHTML="the num is positive = "+ task3;
+
+                }
+            }
+        </script>
+    </div>
+    <hr>
+
+    <div>
+        <h3>Task 4:Check whether the year is leap year or not</h3>
+
+        year: <input type="text" name="" class="" id="y1">
+        <h3 id="leap"></h3>
+        <button type="button" onclick="leapyear()" id="result">Check</button>
+        <script>
+            function leapyear() {
+                let y1 =(document.getElementById('y1').value );
+               // let result4 = document.getElementById('y1').value;
+                if ( (y1 % 4) == 0){
+                    document.getElementById('leap').innerHTML = "The year is leap year =" + y1;
+                }
+                else  {
+                    document.getElementById('leap').innerHTML = "the year is not leap year =" + y1;
+                    
+                }
+            }
+        </script>
+    </div>
+
+    <hr>
+
+    <div>
+        <h3>Task 5:Input a string whether it is Vowel or not</h3>
+        String: <input type="text" name="" class="" id="string">
+        <button  onclick="vowels()">Find</button>
+        <h3 id="result5"></h3>
+
+        <script>
+            function vowels(){
+                let s1 = document.getElementById('string').value;
+                let result5 = document.getElementById('string').value;
+
+                if (s1 == 'a' ||  s1 == 'e' || s1 == 'i' || s1 == 'o' || s1 == 'u' ){
+                    document.getElementById('result5').innerHTML = "the given letter is vowel =" + result5;
+                }
+                else {
+                    document.getElementById('result5').innerHTML = "tha given letter is not vowel =" + result5;
+                }
+            }
+        </script>
+
+    </div>
+    <hr>
+
+    <div>
+        <h3>Task 6:Check whether the given number of string is alphabet or number</h3>
+        enter character or number: <input type="text" name="" id="sn">
+        <button id="" onclick="sn()">Check</button>
+        <h3 id="snc"></h3>
+      
+        <script>
+            function sn(){
+                let sn = document.getElementById('sn').value;
+              //  let result6 = document.getElementById('sn').value;
+                //number(sn);
+                if ( sn>=0 || sn <= 0){
+                    document.getElementById('snc').innerHTML="number";
+                }
+                else {
+                    document.getElementById('snc').innerHTML="alphabet";
+                }
+            }
+        </script>
+
+    </div>
+    <hr>
+
+    <div>
+        <h3>Task 7:Input a number to find the month</h3>
+        input: <input type="text" class=" " value="" id="nmth">
+        <button id="" onclick="nmth()">check</button>
+        <h3 id="mth"></h3>
+        <script>
+            function nmth(){
+                let num = document.getElementById('nmth').value;
+
+                if (num==1){
+                    document.getElementById('mth').innerHTML ="january"
+                }
+                else if (num==2){
+                    document.getElementById('mth').innerHTML ="february"
+
+                }
+                else if (num==3){
+                    document.getElementById('mth').innerHTML ="march"
+
+                }
+                else if (num==4){
+                    document.getElementById('mth').innerHTML ="april"
+
+                }
+                else if (num==5){
+                    document.getElementById('mth').innerHTML ="may"
+
+                }
+                else if (num==6){
+                    document.getElementById('mth').innerHTML ="june"
+
+                }
+                else if (num==7){
+                    document.getElementById('mth').innerHTML ="july"
+
+                }
+                else if (num==8){
+                    document.getElementById('mth').innerHTML ="aug"
+
+                }
+                else if (num==9){
+                    document.getElementById('mth').innerHTML ="sep"
+
+                }
+                else if (num==10){
+                    document.getElementById('mth').innerHTML ="oct"
+
+                }
+                else if (num==11){
+                    document.getElementById('mth').innerHTML ="nov"
+
+                }
+                else if (num==12){
+                    document.getElementById('mth').innerHTML ="dec"
+
+                }
+                else {
+                    alert ("invaidinput");
+                }
+                
+                   
+                
+            }    
+            
+        </script>
+    </div>
+    <hr>
+    <div>
+        <h3>Task 8:Find the grade according to the given marks</h3>
+        entermark: <input type="text " name="" class="" id="mark">
+        <button onclick="grd()">grade</button>
+        <h2 id="grades"></h2>
+        <script>
+            function grd(){
+                let grd =document.getElementById('mark').value;
+             //   let mark ;
+
+
+                if ( mark > 90) {
+                    grade= "A";
+                }
+                else if( mark >= 80)  {
+                    grade= "B";
+                }
+                else if (mark >= 70){
+                    geade="C"
+                }
+                else if( mark >= 60){
+                    grade="D";
+                }
+                else{
+                    grade="E";
+                }
+                document.getElementById('grades').innerHTML = grade;
+            }
+        </script>
+    </div>
+
+    
+    <div>
+            <h2>Array Methods</h2>
+
+            <div>
+                <h3>Push Method</h3>
+                New Element : <input type="text" name="newEle" id="newEle"/><br>
+                <button type="button" onclick="arrMethods('push')">Push</button>
+                <h3>Pop Method</h3>
+                <button type="button" onclick="arrMethods('pop')">Pop</button>
+                <h3>Shift Method</h3>
+                <button type="button" onclick="arrMethods('shift')">Shift</button>
+                <h3>UnShift Method</h3>
+                New Element : <input type="text" name="newShEle" id="newShEle"/>
+                <button type="button" onclick="arrMethods('unshift')">Unshift</button>
+                <h3>Includes Method</h3>
+                Search Element : <input type="text" name="srEle" id="srEle"/>
+                <button type="button" onclick="arrMethods('includes')">Search</button>
+                <span id="includesOp"></span>
+            </div>
+            <div>
+                <p id="arrOp"></p>
+            </div>
+            <script>
+
+                var arr = [50,60];
+                displayArr();
+                function arrMethods(methodName){
+
+                    if(methodName == "push")
+                    {
+                        let newEle = document.getElementById("newEle").value;
+                        push(newEle);
+                    }else if(methodName == 'pop'){
+                        pop();
+                    }else if(methodName == 'shift'){
+                        shift();
+                    }else if(methodName == 'unshift'){
+                        unShift(document.getElementById("newShEle").value);
+                    }else if(methodName == 'includes'){
+                        includes(document.getElementById('srEle').value);
+                    }
+
+                    displayArr();
+                    
+                }
+
+                function displayArr(){
+                    let result = "";
+                    for(let idx=0; idx<arr.length; idx++){
+                        result += " " + arr[idx];
+                    }
+                    document.getElementById('arrOp').innerHTML = result;
+                }
+
+                function push(newEle){
+                    arr[arr.length] = newEle;
+                }
+                function pop(){
+                    arr = arr.splice(0,arr.length-1);
+                }
+                function shift(){
+                    arr = arr.splice(1);
+                }
+                function unShift(newEle){
+                    //arr = [newEle].concat(arr);
+
+                    let newArr = [newEle];
+                    for(let inx=0; inx<arr.length; inx++){
+                        newArr[inx+1] = arr[inx];
+                    }
+                    arr = newArr;
+                }
+                function includes(srEle){
+
+                    for(let arrEle of arr){ //for(let idx=0; idx<arr.length; idx++)
+                        if(arrEle == srEle){
+                            document.getElementById('includesOp').innerHTML = "Available";
+                            break;
+                        }else{
+                            document.getElementById('includesOp').innerHTML = "Not Available";
+                        }
+                    }
+                }
+
+            </script>
+        </div>
+</body>
+</html>

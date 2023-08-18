@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample</title>
+</head>
+<body>
+     <div> 
+     <!-- pin: <input type="text" value="" id="pin">  -->
+     confirm pin : <input type="text" value="" id="cpin">
+     <button onclick="find()">confirm</button>
+     <h2 id="result"></h2>
+     <script> 
+     function find(){
+       // let pin = document.getElementById('pin').value;
+        let pin = '0909';
+        let cpin = document.getElementById('cpin').value;
+        for ( let i=0 ; i<pin.length ; i++){
+            for ( let j=0 ; j<cpin.length ; j++){
+                if ( pin[i]==cpin[j]){
+                    document.getElementById('result').innerHTML = "that was correct!";
+                }
+                else {
+                    document.getElementById('result').innerHTML = "sorry that was wrong";
+                }
+            }
+        }
+       
+     }
+    </script>
+    </div>
+</body>
+</html>

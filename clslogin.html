@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic Login</title>
+</head>
+
+<body>
+    <div>
+        <h2>Dynamic Login</h2>
+        <form>
+            Username : <input type="text" id="user" name="user" /><br>
+            Password : <input type="text" id="pswd" name="pswd" /><br>
+            <input type="button" value="Login" onclick="checkLogin()"/><input type="reset" value="Cancel" />
+        </form>
+        <div id="lgOp"></div>
+    </div>
+    <script>
+        const profiles = [
+            {userName : "Rajesh", password : "8523", userType: "Admin"},
+            {userName : "Fazil", password : "7412", userType: "Guest"},
+            {userName : "Dinesh", password : "abcd", userType: "Member"},
+        ];
+
+        function checkLogin(){
+
+            let user = document.getElementById('user').value;
+            let pswd = document.getElementById('pswd').value;
+            let lgOp = document.getElementById('lgOp');
+
+            for(let profile of profiles){
+                if(profile.userName == user && profile.password == pswd){
+                    sessionStorage.setItem("User", user);
+                    sessionStorage.setItem("UserType", profile.userType);
+                    lgOp.innerHTML = "User Matched...";
+                    //redirect
+                    window.location.href = "clsHome.html";
+                    break;
+                }else{
+                    sessionStorage.removeItem("User");
+                    sessionStorage.removeItem("UserType");
+                }
+            }
+            
+            lgOp.innerHTML = "User Not Matched...";
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Js Topics</title>
+    </head>
+    <body>
+        <div>
+            <div>
+                <h2>RegEx</h2>
+                String : <input id="regIp" type="text" name="regIp"/><br>
+                Pattern : <input type="text" id="regPtn" name="regPtn"/><br>
+                Result : <span id="regOp"></span><br>
+                Matched : <span id="regMtOp"></span><br>
+                <button type="button" onclick="regExpExample()">Validate</button>
+                <script>
+                    function regExpExample(){
+
+                        let ptn = document.getElementById("regPtn").value;
+                        let ip = document.getElementById("regIp").value;
+
+                        let regExp = new RegExp(ptn);
+                        document.getElementById("regOp").innerHTML = regExp.test(ip);
+                        document.getElementById("regMtOp").innerHTML = regExp.exec(ip);
+
+                        //email = [a-z]+[@]+[a-z]+[.]+[a-z]{2,3}$
+                        //mobile = ^[6-9]+[0-9]{9}$
+
+                        console.log(/NA/i.exec("banana"));
+                        console.log("banana".match(/NA/ig));
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
